@@ -1,0 +1,27 @@
+---
+pid: 1008
+config: !ruby/object:Puma::Configuration
+  options:
+    :min_threads: 1
+    :max_threads: 6
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/sandeep/ror/projects/opimas/shared/sockets/puma.sock
+    :workers: 2
+    :daemon: false
+    :worker_directory: "/home/sandeep/ror/projects/opimas"
+    :config_file: config/puma.rb
+    :mode: :http
+    :worker_timeout: 60
+    :worker_shutdown_timeout: 30
+    :environment: production
+    :redirect_stdout: "/home/sandeep/ror/projects/opimas/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/sandeep/ror/projects/opimas/shared/log/puma.stderr.log"
+    :redirect_append: true
+    :pidfile: "/home/sandeep/ror/projects/opimas/shared/pids/puma.pid"
+    :state: "/home/sandeep/ror/projects/opimas/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1438996837852-1008
+    :control_url_temp: "/tmp/puma-status-1438996837852-1008"
+    :control_auth_token: 2aa0bf73e7c67b2afdc98da6e28d5
+    :tag: opimas

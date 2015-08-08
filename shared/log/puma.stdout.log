@@ -5,3 +5,66 @@
 [1008] - Gracefully shutting down workers...
 [1008] === puma shutdown: 2015-08-08 06:57:06 +0530 ===
 [1008] - Goodbye!
+=== puma startup: 2015-08-08 14:06:00 +0530 ===
+[6668] * Starting control server on unix:///tmp/puma-status-1439022960329-6668
+[6668] - Worker 1 (pid: 6763) booted, phase: 0
+[6668] - Worker 0 (pid: 6781) booted, phase: 0
+Started GET "/tasks" for 127.0.0.1 at 2015-08-08 14:08:19 +0530
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 33ms (Views: 10.4ms | ActiveRecord: 5.9ms)
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-08-08 14:08:20 +0530
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-08-08 14:08:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  puma (2.12.3) lib/puma/configuration.rb:53:in `call'
+  puma (2.12.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.12.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.12.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.12.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.12.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  puma (2.12.3) lib/puma/configuration.rb:53:in `call'
+  puma (2.12.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.12.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.12.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.12.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.12.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+

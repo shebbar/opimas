@@ -49,3 +49,21 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (0.4ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+=== puma startup: 2015-08-08 18:36:01 +0530 ===
+[13620] * Starting control server on unix:///tmp/puma-status-1439039161487-13620
+[13620] - Worker 0 (pid: 13675) booted, phase: 0
+[13620] - Worker 1 (pid: 13679) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2015-08-08 18:36:09 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 79ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2015-08-08 18:36:13 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 41.6ms | ActiveRecord: 0.0ms)

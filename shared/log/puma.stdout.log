@@ -67,3 +67,67 @@ Processing by UsersController#new as HTML
   Rendered layouts/_header.html.erb (1.1ms)
   Rendered layouts/_footer.html.erb (0.7ms)
 Completed 200 OK in 58ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+=== puma startup: 2015-08-08 19:12:04 +0530 ===
+[14137] * Starting control server on unix:///tmp/puma-status-1439041324906-14137
+[14137] - Gracefully shutting down workers...
+[14137] === puma shutdown: 2015-08-08 19:15:57 +0530 ===
+[14137] - Goodbye!
+=== puma startup: 2015-08-08 19:16:09 +0530 ===
+[14561] * Starting control server on unix:///tmp/puma-status-1439041569916-14561
+[14561] - Worker 0 (pid: 14924) booted, phase: 0
+Started GET "/signup" for 127.0.0.1 at 2015-08-08 19:19:23 +0530
+Started GET "/" for 127.0.0.1 at 2015-08-08 19:19:23 +0530
+[14561] - Worker 1 (pid: 14927) booted, phase: 0
+Processing by UsersController#new as HTML
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (213.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 515ms (Views: 217.4ms | ActiveRecord: 271.4ms)
+[14561] - Gracefully shutting down workers...
+[14561] === puma shutdown: 2015-08-08 19:19:29 +0530 ===
+[14561] - Goodbye!
+=== puma startup: 2015-08-08 19:19:34 +0530 ===
+[15031] * Starting control server on unix:///tmp/puma-status-1439041774419-15031
+[15031] - Worker 1 (pid: 15090) booted, phase: 0
+[15031] - Worker 0 (pid: 15086) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2015-08-08 19:19:42 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 29ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2015-08-08 19:19:44 +0530
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 25.5ms | ActiveRecord: 7.8ms)
+Started POST "/users" for 127.0.0.1 at 2015-08-08 19:20:05 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6uWH/3qX4h9fiRjWKdDvUnAgOWv/R6lPtKBmb7wQBJk3V2kyePS53OZA/VEayoaLQS03vMhZDpErgaZJ7DadpA==", "user"=>{"name"=>"Sandeep Hebbar", "email"=>"sandeeph@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (183.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('sandeeph@gmail.com') LIMIT 1
+  [1m[36mSQL (12.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sandeep Hebbar"], ["email", "sandeeph@gmail.com"], ["password_digest", "$2a$10$qTDEg30Tkr/thbv5dik3X.7YiKUpXqotHejRM74UV7Cihr3pwjBGa"], ["created_at", "2015-08-08 13:50:06.356881"], ["updated_at", "2015-08-08 13:50:06.356881"]]
+  [1m[35m (32.0ms)[0m  COMMIT
+Redirected to http://localhost/users/1
+Completed 302 Found in 459ms (ActiveRecord: 228.0ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-08 19:20:06 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 7.6ms | ActiveRecord: 0.8ms)

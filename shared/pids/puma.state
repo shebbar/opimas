@@ -1,5 +1,5 @@
 ---
-pid: 15031
+pid: 17836
 config: !ruby/object:Puma::Configuration
   options:
     :min_threads: 1
@@ -21,7 +21,7 @@ config: !ruby/object:Puma::Configuration
     :redirect_append: true
     :pidfile: "/home/sandeep/ror/projects/opimas/shared/pids/puma.pid"
     :state: "/home/sandeep/ror/projects/opimas/shared/pids/puma.state"
-    :control_url: unix:///tmp/puma-status-1439041774419-15031
-    :control_url_temp: "/tmp/puma-status-1439041774419-15031"
-    :control_auth_token: 808a36e1e7051c6bc8362bc6dd8d99
+    :control_url: unix:///tmp/puma-status-1439053450122-17836
+    :control_url_temp: "/tmp/puma-status-1439053450122-17836"
+    :control_auth_token: 8b7de51af5bad0fd9da3c511e6359352
     :tag: opimas

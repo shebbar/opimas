@@ -444,3 +444,10 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (1.2ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+[10383] - Gracefully shutting down workers...
+[10383] === puma shutdown: 2015-08-09 16:41:36 +0530 ===
+[10383] - Goodbye!
+=== puma startup: 2015-08-09 16:41:42 +0530 ===
+[10995] * Starting control server on unix:///tmp/puma-status-1439118702344-10995
+[10995] - Worker 1 (pid: 11054) booted, phase: 0
+[10995] - Worker 0 (pid: 11050) booted, phase: 0

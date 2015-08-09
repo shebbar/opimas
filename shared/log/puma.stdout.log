@@ -104,3 +104,10 @@ Processing by UsersController#show as HTML
   Rendered layouts/_header.html.erb (2.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.4ms)
+=== puma startup: 2015-08-09 11:42:57 +0530 ===
+[1010] * Starting control server on unix:///tmp/puma-status-1439100776965-1010
+[1010] - Worker 0 (pid: 1276) booted, phase: 0
+[1010] - Worker 1 (pid: 1280) booted, phase: 0
+[1010] - Gracefully shutting down workers...
+[1010] === puma shutdown: 2015-08-09 12:13:37 +0530 ===
+[1010] - Goodbye!

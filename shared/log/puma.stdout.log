@@ -357,3 +357,90 @@ Processing by SessionsController#new as HTML
   Rendered layouts/_header.html.erb (232.9ms)
   Rendered layouts/_footer.html.erb (0.9ms)
 Completed 200 OK in 270ms (Views: 240.6ms | ActiveRecord: 13.9ms)
+=== puma startup: 2015-08-09 16:27:24 +0530 ===
+[10158] * Starting control server on unix:///tmp/puma-status-1439117844604-10158
+[10158] - Worker 1 (pid: 10226) booted, phase: 0
+[10158] - Worker 0 (pid: 10222) booted, phase: 0
+[10158] - Gracefully shutting down workers...
+[10158] === puma shutdown: 2015-08-09 16:29:06 +0530 ===
+[10158] - Goodbye!
+=== puma startup: 2015-08-09 16:29:11 +0530 ===
+[10383] * Starting control server on unix:///tmp/puma-status-1439117951072-10383
+[10383] - Worker 1 (pid: 10442) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2015-08-09 16:29:13 +0530
+[10383] - Worker 0 (pid: 10438) booted, phase: 0
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  [1m[36mUser Load (16.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (212.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 321ms (Views: 174.8ms | ActiveRecord: 128.4ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-09 16:31:39 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 19.7ms | ActiveRecord: 12.3ms)
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-09 16:31:44 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"myqc8LycPSzTJpKgicRkmrfptw6FXA+GmhjoYhLJZHeAbSNmkNigg0+mY4cL6mADxwpGBbHmdx5XudUg8mv0xw=="}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", nil], ["updated_at", "2015-08-09 11:01:44.923579"], ["id", 1]]
+  [1m[35m (14.9ms)[0m  COMMIT
+Redirected to http://localhost/
+Completed 302 Found in 24ms (ActiveRecord: 17.2ms)
+Started GET "/" for 127.0.0.1 at 2015-08-09 16:31:44 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2015-08-09 16:31:46 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (154.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 216ms (Views: 215.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2015-08-09 16:31:49 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2fFIiD4b+YQs0jJ0EKgcCmZF92TDGifShQNDaT5Ty0YIHq0DLzySYwzue5SbKTpWXrm1qe2EAeHtTBPRFvfnQ==", "session"=>{"email"=>"sandeeph@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "sandeeph@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$10$fr5y.Zj2d8sTeJzlASpm.Ocoe6YdKBn129PTjNu4Nyb1SZ/n9n2.e"], ["updated_at", "2015-08-09 11:01:50.142533"], ["id", 1]]
+  [1m[35m (8.6ms)[0m  COMMIT
+Redirected to http://localhost/users/1
+Completed 302 Found in 410ms (ActiveRecord: 10.4ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-09 16:31:50 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 1.7ms)
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-09 16:32:00 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0Ieo+Z1Mkb6RxsEQKZbD3V6Q8dOdFuQLnwO8aREBWvvLwBdvsQgMEQ1GMDeruMdELnMA2KmsnJNSooEr8aPKSw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", nil], ["updated_at", "2015-08-09 11:02:00.887046"], ["id", 1]]
+  [1m[35m (17.6ms)[0m  COMMIT
+Redirected to http://localhost/
+Completed 302 Found in 30ms (ActiveRecord: 20.4ms)
+Started GET "/" for 127.0.0.1 at 2015-08-09 16:32:00 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)

@@ -58,4 +58,22 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
+
+    # Confirms various users.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
+    def sales_user
+      redirect_to(root_url) unless current_user.role == 1
+    end
+
+    def analyst_user
+      redirect_to(root_url) unless current_user.role == 2
+    end
+
+    def customer_user
+      redirect_to(root_url) unless current_user.role == 3
+    end
 end
+

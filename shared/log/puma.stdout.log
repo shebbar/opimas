@@ -621,3 +621,115 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (3.4ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.9ms)
+=== puma startup: 2015-08-12 23:24:27 +0530 ===
+[21818] * Starting control server on unix:///tmp/puma-status-1439402067792-21818
+[21818] - Worker 0 (pid: 21873) booted, phase: 0
+[21818] - Worker 1 (pid: 21877) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2015-08-12 23:24:33 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (9.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2015-08-12 23:24:36 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2015-08-12 23:24:40 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2015-08-12 23:24:44 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (9.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+[21818] - Gracefully shutting down workers...
+[21818] === puma shutdown: 2015-08-12 23:33:35 +0530 ===
+[21818] - Goodbye!
+=== puma startup: 2015-08-12 23:33:49 +0530 ===
+[22335] * Starting control server on unix:///tmp/puma-status-1439402629893-22335
+[22335] - Worker 1 (pid: 22394) booted, phase: 0
+Started GET "/login" for 127.0.0.1 at 2015-08-12 23:33:52 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+[22335] - Worker 0 (pid: 22390) booted, phase: 0
+[22335] - Gracefully shutting down workers...
+[22335] === puma shutdown: 2015-08-12 23:39:51 +0530 ===
+[22335] - Goodbye!
+=== puma startup: 2015-08-13 07:40:32 +0530 ===
+[1010] * Starting control server on unix:///tmp/puma-status-1439431832391-1010
+[1010] - Worker 1 (pid: 1238) booted, phase: 0
+[1010] - Worker 0 (pid: 1234) booted, phase: 0
+[1010] - Gracefully shutting down workers...
+[1010] === puma shutdown: 2015-08-13 07:56:37 +0530 ===
+[1010] - Goodbye!
+=== puma startup: 2015-08-13 08:34:58 +0530 ===
+[4602] * Starting control server on unix:///tmp/puma-status-1439435098161-4602
+[4602] - Worker 1 (pid: 4687) booted, phase: 0
+[4602] - Worker 0 (pid: 4683) booted, phase: 0
+[4602] - Gracefully shutting down workers...
+[4602] === puma shutdown: 2015-08-13 08:47:15 +0530 ===
+[4602] - Goodbye!
+=== puma startup: 2015-08-13 08:47:21 +0530 ===
+[5083] * Starting control server on unix:///tmp/puma-status-1439435841307-5083
+[5083] - Worker 1 (pid: 5142) booted, phase: 0
+[5083] - Worker 0 (pid: 5152) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2015-08-13 08:47:32 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (10.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2015-08-13 08:47:35 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (149.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (9.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 214ms (Views: 198.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2015-08-13 08:47:38 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DhQdsNZs9fIP+SvNP1f96oKeZ+z1QGLkMf2A7HBJeQeHTim1qO+CCQh4mnbxzwdhXp11T965mV8C+xCliooC3A==", "session"=>{"email"=>"sandeeph@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (21.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "sandeeph@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$10$frrVtsVHQDTC1Xqu7xybeurQYltiKZ3EVGCyM5ucssWdY/EuKJS.W"], ["updated_at", "2015-08-13 03:17:39.222067"], ["id", 1]]
+  [1m[35m (8.9ms)[0m  COMMIT
+Redirected to http://localhost/users/1
+Completed 302 Found in 576ms (ActiveRecord: 125.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2015-08-13 08:47:39 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 43.4ms | ActiveRecord: 13.6ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-08-13 08:47:45 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 60.1ms | ActiveRecord: 1.7ms)

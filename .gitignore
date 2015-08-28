@@ -11,6 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
-/shared/*
-/shared/*/*
-/public/assets/.sp*
+/shared/log/*
+/shared/pids/*
+/shared/sockets/*

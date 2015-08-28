@@ -1,0 +1,8 @@
+<ul>
+<% subcategories.each do |sub| %>
+  <li>
+    <option value="<%= sub.id %>"><%= sub.name %></option>
+    <%= render partial: 'newsubcategory', locals: {subcategories: sub.subcategories} if sub.subcategories.present? %>
+  </li>
+<% end %>
+</ul>

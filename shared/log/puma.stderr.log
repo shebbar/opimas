@@ -1,86 +1,27 @@
-=== puma startup: 2015-08-09 13:26:29 +0530 ===
-=== puma startup: 2015-08-09 13:30:43 +0530 ===
-=== puma startup: 2015-08-09 13:33:44 +0530 ===
-=== puma startup: 2015-08-09 13:59:44 +0530 ===
-=== puma startup: 2015-08-09 14:03:39 +0530 ===
-=== puma startup: 2015-08-09 14:09:03 +0530 ===
-=== puma startup: 2015-08-09 14:46:38 +0530 ===
-=== puma startup: 2015-08-09 14:52:59 +0530 ===
-=== puma startup: 2015-08-09 14:55:02 +0530 ===
-=== puma startup: 2015-08-09 16:27:24 +0530 ===
-DEPRECATION WARNING: The configuration option `config.serve_static_assets` has been renamed to `config.serve_static_files` to clarify its role (it merely enables serving everything in the `public` folder and is unrelated to the asset pipeline). The `serve_static_assets` alias will be removed in Rails 5.0. Please migrate your configuration files accordingly. (called from block in <top (required)> at /home/sandeep/ror/projects/opimas/config/environments/production.rb:6)
-DEPRECATION WARNING: The configuration option `config.serve_static_assets` has been renamed to `config.serve_static_files` to clarify its role (it merely enables serving everything in the `public` folder and is unrelated to the asset pipeline). The `serve_static_assets` alias will be removed in Rails 5.0. Please migrate your configuration files accordingly. (called from block in <top (required)> at /home/sandeep/ror/projects/opimas/config/environments/production.rb:6)
-=== puma startup: 2015-08-09 16:29:11 +0530 ===
-=== puma startup: 2015-08-09 16:41:42 +0530 ===
-=== puma startup: 2015-08-09 18:02:59 +0530 ===
-=== puma startup: 2015-08-10 08:00:58 +0530 ===
-=== puma startup: 2015-08-10 08:48:38 +0530 ===
-=== puma startup: 2015-08-11 08:28:06 +0530 ===
-=== puma startup: 2015-08-11 11:40:58 +0530 ===
-=== puma startup: 2015-08-11 12:29:39 +0530 ===
-=== puma startup: 2015-08-11 15:00:38 +0530 ===
-=== puma startup: 2015-08-12 23:24:27 +0530 ===
-=== puma startup: 2015-08-12 23:33:49 +0530 ===
-=== puma startup: 2015-08-13 07:40:32 +0530 ===
-=== puma startup: 2015-08-13 08:34:58 +0530 ===
-=== puma startup: 2015-08-13 08:47:21 +0530 ===
-/home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/rack-1.6.4/lib/rack/mime.rb:2:in `<module:Rack>': wrong argument type Object (expected String) (TypeError)
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/rack-1.6.4/lib/rack/mime.rb:1:in `<top (required)>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `block in require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:240:in `load_dependency'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/rack-1.6.4/lib/rack/file.rb:3:in `<top (required)>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `block in require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:240:in `load_dependency'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/rack-1.6.4/lib/rack/sendfile.rb:1:in `<top (required)>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application/default_middleware_stack.rb:18:in `block in build_stack'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application/default_middleware_stack.rb:13:in `tap'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application/default_middleware_stack.rb:13:in `build_stack'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application.rb:513:in `default_middleware_stack'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/engine.rb:501:in `app'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application/finisher.rb:34:in `block in <module:Finisher>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/initializable.rb:30:in `instance_exec'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/initializable.rb:30:in `run'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/initializable.rb:55:in `block in run_initializers'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/initializable.rb:54:in `run_initializers'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/application.rb:352:in `initialize!'
-	from /home/sandeep/ror/projects/opimas/config/environment.rb:5:in `<top (required)>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `block in require'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:240:in `load_dependency'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.2/lib/active_support/dependencies.rb:274:in `require'
-	from config.ru:3:in `block in <main>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/rack/builder.rb:184:in `instance_eval'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/rack/builder.rb:184:in `initialize'
-	from config.ru:in `new'
-	from config.ru:in `<main>'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/rack/builder.rb:170:in `eval'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/rack/builder.rb:170:in `new_from_string'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/rack/builder.rb:161:in `parse_file'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/configuration.rb:104:in `load_rackup'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/configuration.rb:71:in `app'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/runner.rb:123:in `app'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/runner.rb:130:in `start_server'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:215:in `worker'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:109:in `block (2 levels) in spawn_workers'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:109:in `fork'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:109:in `block in spawn_workers'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:105:in `times'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:105:in `spawn_workers'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cluster.rb:382:in `run'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/lib/puma/cli.rb:215:in `run'
-	from /home/sandeep/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/puma-2.12.3/bin/puma:10:in `<top (required)>'
-	from /home/sandeep/.rbenv/versions/2.1.2/bin/puma:23:in `load'
-	from /home/sandeep/.rbenv/versions/2.1.2/bin/puma:23:in `<main>'
+=== puma startup: 2015-08-27 11:57:32 +0530 ===
+=== puma startup: 2015-08-27 12:03:39 +0530 ===
+=== puma startup: 2015-08-27 12:48:09 +0530 ===
+=== puma startup: 2015-08-27 12:48:52 +0530 ===
+=== puma startup: 2015-08-27 12:51:19 +0530 ===
+=== puma startup: 2015-08-27 12:53:43 +0530 ===
+=== puma startup: 2015-08-27 12:56:16 +0530 ===
+=== puma startup: 2015-08-27 12:57:43 +0530 ===
+=== puma startup: 2015-08-27 13:32:57 +0530 ===
+=== puma startup: 2015-08-27 13:37:01 +0530 ===
+=== puma startup: 2015-08-27 13:38:37 +0530 ===
+=== puma startup: 2015-08-27 13:40:59 +0530 ===
+=== puma startup: 2015-08-27 13:41:59 +0530 ===
+=== puma startup: 2015-08-27 13:43:10 +0530 ===
+=== puma startup: 2015-08-27 15:24:50 +0530 ===
+=== puma startup: 2015-08-27 15:26:09 +0530 ===
+=== puma startup: 2015-08-27 15:33:51 +0530 ===
+=== puma startup: 2015-08-27 15:35:44 +0530 ===
+=== puma startup: 2015-08-27 16:11:08 +0530 ===
+=== puma startup: 2015-08-28 09:00:01 +0530 ===
+=== puma startup: 2015-08-28 16:25:03 +0530 ===
+=== puma startup: 2015-08-28 16:28:56 +0530 ===
+=== puma startup: 2015-08-28 16:38:47 +0530 ===
+=== puma startup: 2015-08-28 16:40:11 +0530 ===
+=== puma startup: 2015-08-28 16:40:59 +0530 ===
+=== puma startup: 2015-08-28 17:18:02 +0530 ===
+=== puma startup: 2015-08-28 17:30:40 +0530 ===

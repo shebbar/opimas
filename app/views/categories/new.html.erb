@@ -5,24 +5,23 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@category) do |f| %>
       <%= render 'shared/categerror_messages' %>
-
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
-      <div class="row"> 
-        <h2> Select Master/Parent Category </h2>
-        <select name="category[parent_id]", class="form-control">
-        <option value =""></option>
-        <% unless @mastercats.nil? %>
-          <% @mastercats.each do |master| %>
-            <% if master.parent_id.nil? %>
-              <option value="<%= master.id %>"><%= master.name %></option>
-              <%= render partial: 'newsubcategory', locals: {subcategories: master.subcategories} if master.subcategories.present? %>
-            <% end %>
+      <p> Please select a parent category, blank if root </p>
+      <%= f.label :parent_id %>
+      <%= f.select(:parent_id) do %>
+        <option value=""></option>
+        <% @mastercats.each do |master| %>
+          <% if master.parent_id.blank? %>
+            <option value="<%= master.id %>"><%= master.name %></option>
+            <%= render partial: 'newsubcategory', locals: {subcategories: master.subcategories} if master.subcategories.present? %>
           <% end %>
         <% end %>
-      </div> 
-      <%= f.submit "Create new category", class: "btn btn-primary" %>
+      <% end %>
+      <div class="form-actions">
+        <%= f.submit "Create", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
-  <%= link_to 'Back', categories_path %>
 </div>
+<%= link_to 'Back', categories_path %>

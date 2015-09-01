@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :categories
+  resources :categories
+  resources :categories
   root 'static_pages#home'
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'

@@ -1,0 +1,58 @@
+<% provide(:title, 'Company Details') %>
+<h1>Company Details</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @company.contact_name %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @company.email %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @company.phone %>
+</p>
+
+<p>
+  <strong>Address 1:</strong>
+  <%= @company.address_1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @company.address_2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @company.city %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @company.region %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @company.zip %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @company.country %>
+</p>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

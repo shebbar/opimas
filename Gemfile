@@ -36,6 +36,7 @@ gem 'bootstrap-sass',       '3.2.0.0'
 gem 'redis-rails'
 gem 'puma'
 gem 'simple_form'
+gem 'country_select'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

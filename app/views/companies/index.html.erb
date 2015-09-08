@@ -1,0 +1,14 @@
+<% provide(:title, 'Listing Companies') %>
+<h1>Listing Companies</h1>
+
+<div class="row">
+  <% @companies.each do |company| %>
+  <ul>
+    <li><%= company.name %>  <%= link_to 'Edit', edit_company_path(company), class: "btn btn-primary" %>  <%= link_to 'Destroy', company, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
+  <% end %>
+</div>
+<br>
+
+<%= link_to 'New Company', new_company_path %>

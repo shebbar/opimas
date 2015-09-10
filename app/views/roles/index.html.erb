@@ -1,0 +1,11 @@
+<% provide(:title, 'Listing Roles') %>
+<h1>Listing Roles</h1>
+
+<div class="row">
+    <% @roles.each do |role| %>
+      <ul>
+        <li><%= role.name %>  <%= link_to 'Show', role, class: "btn btn-info" %>  <%= link_to 'Edit', edit_role_path(role), class: "btn btn-primary" %>  <%= link_to 'Destroy', role, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+      </ul>
+    <% end %>
+  <%= link_to 'New Role', new_role_path %>
+</div>

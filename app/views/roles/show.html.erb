@@ -1,0 +1,27 @@
+<% provide(:title, 'Role Details') %>
+<h1>Role Details</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<p>
+  <strong>Name:</strong>
+  <%= @role.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @role.description %>
+</p>
+  </div>
+</div>
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>List of Associated Users</h1>
+    <% @roleusers = @role.users %>
+    <% @roleusers.each do |roleuser| %>
+      <p><%= roleuser.name %></p>
+    <% end %>
+  </div>
+</div>

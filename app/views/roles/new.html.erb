@@ -10,10 +10,8 @@
 
       <%= f.input :description %>
 
-      <%= f.association :employees %>
-
       <%= f.submit "Create Role", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
-<%= link_to 'Back', roles_path %>
+<%= link_to 'Back', roles_path %> | <%= link_to 'New Role', new_role_path %>

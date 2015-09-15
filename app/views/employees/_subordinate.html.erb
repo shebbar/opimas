@@ -1,0 +1,12 @@
+<ul>
+<% subordinates.each do |sub| %>
+  <div class="row">
+    <div class="col-md-4">
+      <li>
+      <p> <%= sub.user.name %>  <%= link_to 'Show', employee %>  <%= link_to "Edit", edit_employee_path(sub), :class => "btn btn-primary" %>  <%= link_to "Delete", sub, :method => 'delete', :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %> </p>
+    </div>
+  </div>
+  <%= render partial: 'subordinate', locals: {subordinates: sub.subordinates} if sub.subordinates.present? %>
+</li>
+<% end %>
+</ul>

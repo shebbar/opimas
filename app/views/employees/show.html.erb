@@ -1,0 +1,33 @@
+<% provide(:title, 'Employee Details') %>
+<h1>Employee Details</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<p>
+  <strong>Name:</strong>
+  <%= @employee.user.name %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @employee.id %>
+</p>
+
+<p>
+  <strong>Date of Joining:</strong>
+  <%= @employee.joining_date %>
+</p>
+  </div>
+</div>
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>List of Associated Roles</h1>
+    <% @employeeroles = @employee.roles %>
+    <% @employeeroles.each do |employeerole| %>
+      <p><%= employeerole.role.name %></p>
+    <% end %>
+  </div>
+</div>
+<p>

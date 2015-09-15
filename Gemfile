@@ -37,6 +37,9 @@ gem 'redis-rails'
 gem 'puma'
 gem 'simple_form'
 gem 'country_select'
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,0 +1,8 @@
+<ul>
+<% subordinates.each do |sub| %>
+  <li>
+    <option value="<%= sub.id %>"><%= sub.user.name %></option>
+    <%= render partial: 'editsubordinate', locals: {subordinates: sub.subordinates} if sub.subordinates.present? %>
+  </li>
+<% end %>
+</ul>

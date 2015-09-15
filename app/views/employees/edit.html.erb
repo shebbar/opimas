@@ -1,0 +1,33 @@
+<% provide(:title, 'Edit Employee') %>
+<h1>Edit Employee</h1>
+<% @managers = Employee.includes(:subordinates) %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for @employee do |f| %>
+      <%= f.association :user %>
+
+      <p> Please select a manager for this employee </p>
+      <%= f.label :manager_id %>
+      <%= f.select(:manager_id) do %>
+        <option value=""></option>
+        <% @managers.each do |manager| %>
+          <% if manager.manager_id.blank? %>
+            <option value="<%= manager.id %>"><%= manager.user.name %></option>
+            <%= render partial: 'editsubordinate', locals: {subordinates: manager.subordinates} if manager.subordinates.present? %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <%= f.input :joining_date, :as => :date_picker %>
+
+      <%= f.association :roles %>
+
+      <%= f.association :categories %>
+
+      <div class="form-actions">
+        <%= f.submit "Save Changes", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Back', employees_path %>

@@ -4,7 +4,7 @@
   <% @employees.each do |employee| %>
   <ul>
     <% if employee.manager_id.blank? %>
-      <li><%= employee.user.name %>  <%= link_to 'Show', employee, class: "btn btn-info" %>  <%= link_to "Edit", edit_employee_path(employee), :class => "btn btn-primary" %>  <%= link_to "Delete", employee_path(employee), :method => 'delete', :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+      <li><%= employee.name %>  <%= link_to 'Show', employee, class: "btn btn-info" %>  <%= link_to "Edit", edit_employee_path(employee), :class => "btn btn-primary" %>  <%= link_to "Delete", employee_path(employee), :method => 'delete', :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
       <%= render partial: 'subordinate', locals: {subordinates: employee.subordinates} if employee.subordinates.present? %>
       </li>
         <% end %>

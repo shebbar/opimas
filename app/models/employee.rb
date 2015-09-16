@@ -4,4 +4,5 @@ class Employee < ActiveRecord::Base
   has_and_belongs_to_many :categories, join_table: :categories_employees
   has_and_belongs_to_many :roles, join_table: :employees_roles
   belongs_to :user
+  has_and_belongs_to_many :reports, join_table: :employees_reports
 end

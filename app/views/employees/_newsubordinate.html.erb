@@ -1,7 +1,7 @@
 <ul>
 <% subordinates.each do |sub| %>
   <li>
-    <option value="<%= sub.id %>"><%= sub.user.name %></option>
+    <option value="<%= sub.id %>"><%= sub.name %></option>
     <%= render partial: 'newsubordinate', locals: {subordinates: sub.subordinates} if sub.subordinates.present? %>
   </li>
 <% end %>

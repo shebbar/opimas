@@ -4,6 +4,8 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= simple_form_for @employee do |f| %>
+      <%= f.input :name %>
+
       <%= f.association :user %>
 
       <p> Please select a manager for this employee </p>
@@ -12,7 +14,7 @@
         <option value=""></option>
         <% @managers.each do |manager| %>
           <% if manager.manager_id.blank? %>
-            <option value="<%= manager.id %>"><%= manager.user.name %></option>
+            <option value="<%= manager.id %>"><%= manager.name %></option>
             <%= render partial: 'editsubordinate', locals: {subordinates: manager.subordinates} if manager.subordinates.present? %>
           <% end %>
         <% end %>

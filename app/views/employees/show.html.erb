@@ -4,7 +4,7 @@
   <div class="col-md-6 col-md-offset-3">
 <p>
   <strong>Name:</strong>
-  <%= @employee.user.name %>
+  <%= @employee.name %>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
     <h1>List of Associated Roles</h1>
     <% @employeeroles = @employee.roles %>
     <% @employeeroles.each do |employeerole| %>
-      <p><%= employeerole.role.name %></p>
+      <p><%= employeerole.name %></p>
     <% end %>
   </div>
 </div>

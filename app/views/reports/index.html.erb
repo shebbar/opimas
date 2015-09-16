@@ -1,0 +1,10 @@
+<% provide(:title, 'Listing Reports') %>
+<h1>Listing Reports</h1>
+<div class="row">
+  <% @reports.each do |report| %>
+    <ul>
+        <li><%= report.title %> <%= report.main_report %>  <%= link_to 'Show', report, class: "btn btn-info" %>  <%= link_to 'Edit', edit_report_path(report), class: "btn btn-primary" %>  <%= link_to 'Destroy', report, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+      </ul>
+  <% end %>
+  <%= link_to 'New Report', new_report_path %>
+</div>

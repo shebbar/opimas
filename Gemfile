@@ -39,7 +39,8 @@ gem 'simple_form'
 gem 'country_select'
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
-
+gem "paperclip", "~> 4.3"
+gem 'jplayer-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

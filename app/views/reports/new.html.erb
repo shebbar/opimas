@@ -1,0 +1,30 @@
+<% provide(:title, 'New Report') %>
+<h1>New Report</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for @report, url: reports_path do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :title %>
+
+      <%= f.input :main_report, as: :file %>
+
+      <%= f.input :summary %>
+
+      <%= f.input :charts, as: :file %>
+
+      <%= f.input :vid, as: :file %>
+
+      <%= f.input :press_release, as: :file %>
+
+      <%= f.input :publication_date, :as => :date_picker %>
+
+      <%= f.association :employees %>
+
+      <%= f.association :categories %>
+
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Back', reports_path %>

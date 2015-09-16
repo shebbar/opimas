@@ -1,0 +1,52 @@
+<% provide(:title, 'Report Details') %>
+<h1>Report Details</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p>
+      <strong>Title:</strong>
+      <%= @report.title %>
+    </p>
+
+    <p>
+      <strong>Summary:</strong>
+      <%= @report.summary %>
+    </p>
+
+    <p>
+      <strong>Publication date:</strong>
+      <%= @report.publication_date %>
+    </p>
+
+    <p>
+      <strong>Press release:</strong>
+      <%= link_to Report.last.press_release.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
+      <% end %>
+    </p>
+
+    <p>
+      <strong>Main report:</strong>
+      <%= link_to Report.last.main_report.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
+      <% end %>
+    </p>
+
+    <p>
+      <strong>Charts:</strong>
+      <%= link_to Report.last.charts.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
+      <% end %>
+    </p>
+
+    <p>
+      <strong>Vid:</strong>
+      <%= link_to Report.last.vid.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
+      <% end %>
+    </p>
+
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

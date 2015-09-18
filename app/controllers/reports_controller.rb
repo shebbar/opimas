@@ -25,6 +25,7 @@ class ReportsController < ApplicationController
   # POST /reports
   # POST /reports.json
   def create
+    add_parent_categories (params[:report][:category_ids])
     @report = Report.create(report_params)
 
     respond_to do |format|
@@ -41,6 +42,7 @@ class ReportsController < ApplicationController
   # PATCH/PUT /reports/1
   # PATCH/PUT /reports/1.json
   def update
+    add_parent_categories (params[:report][:category_ids])
     respond_to do |format|
       if @report.update(report_params)
         format.html { redirect_to @report, notice: 'Report was successfully updated.' }
@@ -71,5 +73,24 @@ class ReportsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_params
       params.require(:report).permit(:title, :summary, :publication_date, :press_release, :main_report, :charts, :vid, employee_ids: [], category_ids: [])
+    end
+
+    def add_parent_categories (catarrays)
+      paramarray = catarrays
+        catarrays.each do |catarr|
+          if Category.exists?(catarr)
+            @count = 1
+            catObj = Category.find(catarr)
+            unless catObj.parent_id.nil?
+              parentcatObj = Category.find(catObj.parent_id)
+              paramarray <<  parentcatObj.id
+              unless parentcatObj.parent_id.nil?
+                mastercatObj = Category.find(parentcatObj.parent_id)
+                paramarray <<  mastercatObj.id
+              end
+            end
+          end
+        end
+        params[:report][:category_ids] = paramarray.uniq
     end
 end

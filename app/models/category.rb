@@ -4,4 +4,5 @@ class Category < ActiveRecord::Base
   has_and_belongs_to_many :employees, join_table: :categories_employees
   has_and_belongs_to_many :reports, join_table: :categories_reports
   has_many :category_subscribers, through: :category_subscriptions
+  has_many :category_subscriptions
 end

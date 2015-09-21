@@ -1,8 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Subscription Details') %>
+<h1>Subscription Details</h1>
 
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 <p>
   <strong>Company:</strong>
-  <%= @category_subscriber.company_id %>
+  <%= @category_subscriber.company.name %>
 </p>
 
 <p>
@@ -24,6 +27,21 @@
   <strong>Contract value:</strong>
   <%= @category_subscriber.contract_value %>
 </p>
+
+<h1>List of Account Manager(s)</h1>
+    <% @salesguys = @category_subscriber.employees %>
+    <% @salesguys.each do |salesguy| %>
+      <p><%= salesguy.name %></p>
+    <% end %>
+<br>
+
+<h1>List of Subscribed Categories</h1>
+    <% @categories = @category_subscriber.categories %>
+    <% @categories.each do |category| %>
+      <p><%= category.name %></p>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_category_subscriber_path(@category_subscriber) %> |
 <%= link_to 'Back', category_subscribers_path %>

@@ -15,10 +15,12 @@ class ReportSubscribersController < ApplicationController
   # GET /report_subscribers/new
   def new
     @report_subscriber = ReportSubscriber.new
+    @salesguys = Employee.includes(:roles).where('roles.name' => 'Sales')
   end
 
   # GET /report_subscribers/1/edit
   def edit
+    @salesguys = Employee.includes(:roles).where('roles.name' => 'Sales')
   end
 
   # POST /report_subscribers
@@ -69,6 +71,6 @@ class ReportSubscribersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_subscriber_params
-      params.require(:report_subscriber).permit(:company_id, :contract_start_date, :contract_end_date, :contract_currency, :contract_value, report_ids: [])
+      params.require(:report_subscriber).permit(:company_id, :contract_start_date, :contract_end_date, :contract_currency, :contract_value, report_ids: [], employee_ids: [])
     end
 end

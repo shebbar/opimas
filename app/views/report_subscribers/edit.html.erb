@@ -1,6 +1,25 @@
-<h1>Editing Report Subscriber</h1>
+<% provide(:title, 'Edit Report Subscriber') %>
+<h1>Edit Report Subscriber</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for @report_subscriber do |f| %>
+      <%= f.association :company %>
 
-<%= render 'form' %>
+      <%= f.input :contract_start_date, :as => :date_picker %>
 
-<%= link_to 'Show', @report_subscriber %> |
+      <%= f.input :contract_end_date, :as => :date_picker %>
+
+      <%= f.input :contract_currency, collection: %w[$ €] %>
+
+      <%= f.input :contract_value %>
+
+      <%= f.association :employees, label: 'Please Select an Account Manager', collection: @salesguys %>
+
+      <%= f.association :reports %>
+
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to 'Back', report_subscribers_path %>

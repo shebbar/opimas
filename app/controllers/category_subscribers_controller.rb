@@ -15,10 +15,12 @@ class CategorySubscribersController < ApplicationController
   # GET /category_subscribers/new
   def new
     @category_subscriber = CategorySubscriber.new
+    @salesguys = Employee.includes(:roles).where('roles.name' => 'Sales')
   end
 
   # GET /category_subscribers/1/edit
   def edit
+    @salesguys = Employee.includes(:roles).where('roles.name' => 'Sales')
   end
 
   # POST /category_subscribers
@@ -69,6 +71,6 @@ class CategorySubscribersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_subscriber_params
-      params.require(:category_subscriber).permit(:company_id, :contract_start_date, :contract_end_date, :contract_currency, :contract_value)
+      params.require(:category_subscriber).permit(:company_id, :contract_start_date, :contract_end_date, :contract_currency, :contract_value, category_ids: [], employee_ids: [])
     end
 end

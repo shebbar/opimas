@@ -1,35 +1,14 @@
-<p id="notice"><%= notice %></p>
-
+<% provide(:title, 'Listing Category Subscribers') %>
 <h1>Listing Category Subscribers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Contract start date</th>
-      <th>Contract end date</th>
-      <th>Contract currency</th>
-      <th>Contract value</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @category_subscribers.each do |category_subscriber| %>
-      <tr>
-        <td><%= category_subscriber.company_id %></td>
-        <td><%= category_subscriber.contract_start_date %></td>
-        <td><%= category_subscriber.contract_end_date %></td>
-        <td><%= category_subscriber.contract_currency %></td>
-        <td><%= category_subscriber.contract_value %></td>
-        <td><%= link_to 'Show', category_subscriber %></td>
-        <td><%= link_to 'Edit', edit_category_subscriber_path(category_subscriber) %></td>
-        <td><%= link_to 'Destroy', category_subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="row">
+  <strong>Id  Company  Contract Start Date  Contract End Date Value</strong>
+  <% @category_subscribers.each do |category_subscriber| %>
+  <ul>
+    <li><%= category_subscriber.id %>  <%= category_subscriber.company.name %>  <%= category_subscriber.contract_start_date %>  <%= category_subscriber.contract_end_date %>  <%= category_subscriber.contract_currency %><%= category_subscriber.contract_value %>  <%= link_to 'Show', category_subscriber, class: "btn btn-info" %>  <%= link_to 'Edit', edit_category_subscriber_path(category_subscriber), class: "btn btn-primary" %>  <%= link_to 'Destroy', category_subscriber, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
+  <% end %>
+</div>
 <br>
-
 <%= link_to 'New Category subscriber', new_category_subscriber_path %>

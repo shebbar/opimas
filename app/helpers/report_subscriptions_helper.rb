@@ -1,0 +1,2 @@
+module ReportSubscriptionsHelper
+end

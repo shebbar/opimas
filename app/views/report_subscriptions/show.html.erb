@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Report:</strong>
+  <%= @report_subscription.report_id %>
+</p>
+
+<p>
+  <strong>Report subscriber:</strong>
+  <%= @report_subscription.report_subscriber_id %>
+</p>
+
+<%= link_to 'Edit', edit_report_subscription_path(@report_subscription) %> |
+<%= link_to 'Back', report_subscriptions_path %>

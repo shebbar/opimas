@@ -1,0 +1,15 @@
+<%= simple_form_for(@report_subscriber) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :company_id %>
+    <%= f.input :contract_start_date %>
+    <%= f.input :contract_end_date %>
+    <%= f.input :contract_currency %>
+    <%= f.input :contract_value %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

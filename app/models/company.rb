@@ -1,5 +1,7 @@
 class Company < ActiveRecord::Base
   has_many :users
+  has_many :report_subscribers
+  has_many :category_subscribers
   before_save :normalize_email
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

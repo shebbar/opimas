@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :category_subscriptions
+  resources :report_subscriptions
+  resources :category_subscribers
+  resources :report_subscribers
   resources :reports
   resources :employees
   resources :roles

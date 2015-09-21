@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @category_subscriber.company_id %>
+</p>
+
+<p>
+  <strong>Contract start date:</strong>
+  <%= @category_subscriber.contract_start_date %>
+</p>
+
+<p>
+  <strong>Contract end date:</strong>
+  <%= @category_subscriber.contract_end_date %>
+</p>
+
+<p>
+  <strong>Contract currency:</strong>
+  <%= @category_subscriber.contract_currency %>
+</p>
+
+<p>
+  <strong>Contract value:</strong>
+  <%= @category_subscriber.contract_value %>
+</p>
+
+<%= link_to 'Edit', edit_category_subscriber_path(@category_subscriber) %> |
+<%= link_to 'Back', category_subscribers_path %>

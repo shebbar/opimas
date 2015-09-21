@@ -1,0 +1,2 @@
+module ReportSubscribersHelper
+end

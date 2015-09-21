@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Report Subscriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Report</th>
+      <th>Report subscriber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_subscriptions.each do |report_subscription| %>
+      <tr>
+        <td><%= report_subscription.report_id %></td>
+        <td><%= report_subscription.report_subscriber_id %></td>
+        <td><%= link_to 'Show', report_subscription %></td>
+        <td><%= link_to 'Edit', edit_report_subscription_path(report_subscription) %></td>
+        <td><%= link_to 'Destroy', report_subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report subscription', new_report_subscription_path %>

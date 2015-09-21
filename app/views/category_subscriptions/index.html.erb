@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Category Subscriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Category subscriber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @category_subscriptions.each do |category_subscription| %>
+      <tr>
+        <td><%= category_subscription.category_id %></td>
+        <td><%= category_subscription.category_subscriber_id %></td>
+        <td><%= link_to 'Show', category_subscription %></td>
+        <td><%= link_to 'Edit', edit_category_subscription_path(category_subscription) %></td>
+        <td><%= link_to 'Destroy', category_subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category subscription', new_category_subscription_path %>

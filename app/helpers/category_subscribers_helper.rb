@@ -1,0 +1,2 @@
+module CategorySubscribersHelper
+end

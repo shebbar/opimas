@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category_subscription.category_id %>
+</p>
+
+<p>
+  <strong>Category subscriber:</strong>
+  <%= @category_subscription.category_subscriber_id %>
+</p>
+
+<%= link_to 'Edit', edit_category_subscription_path(@category_subscription) %> |
+<%= link_to 'Back', category_subscriptions_path %>

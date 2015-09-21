@@ -1,0 +1,14 @@
+<% provide(:title, 'Listing Report Subscribers') %>
+<h1>Listing Report Subscribers</h1>
+
+<div class="row">
+  <strong>Id  Company  Contract Start Date  Contract End Date Value</strong>
+  <% @report_subscribers.each do |report_subscriber| %>
+  <ul>
+    <li><%= report_subscriber.id %>  <%= report_subscriber.company.name %>  <%= report_subscriber.contract_start_date %>  <%= report_subscriber.contract_end_date %>  <%= report_subscriber.contract_currency %><%= report_subscriber.contract_value %>  <%= link_to 'Show', report_subscriber, class: "btn btn-info" %>  <%= link_to 'Edit', edit_report_subscriber_path(report_subscriber), class: "btn btn-primary" %>  <%= link_to 'Destroy', report_subscriber, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
+  <% end %>
+</div>
+<br>
+<%= link_to 'New Report subscriber', new_report_subscriber_path %>

@@ -4,7 +4,7 @@
 <div class="row">
   <% @companies.each do |company| %>
   <ul>
-    <li><%= company.name %>  <%= link_to 'Edit', edit_company_path(company), class: "btn btn-primary" %>  <%= link_to 'Destroy', company, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    <li><%= company.name %>  <%= link_to "Show", company, class: "btn btn-info" %>  <%= link_to 'Edit', edit_company_path(company), class: "btn btn-primary" %>  <%= link_to 'Destroy', company, method: :delete, :class => "btn btn-danger", data: { confirm: 'Are you sure?' } %>
     </li>
   </ul>
   <% end %>

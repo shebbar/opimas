@@ -56,3 +56,13 @@
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>List of Associated Users</h1>
+    <% @companyusers = @company.users %>
+    <% @companyusers.each do |companyuser| %>
+      <p><%= companyuser.name %></p>
+    <% end %>
+  </div>
+</div>

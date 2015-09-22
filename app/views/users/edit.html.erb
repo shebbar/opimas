@@ -13,11 +13,10 @@
       <%= f.input :password %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
+
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       
       <%= f.association :company %>
-
-      <%= f.association :roles %>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

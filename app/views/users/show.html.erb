@@ -9,3 +9,33 @@
     </section>
   </aside>
 </div>
+<div class="row">
+  <% if @user.admin? %>
+  <h1>Admin Page</h1>
+  <ul>
+    <li><%= link_to "Categories", categories_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Roles", roles_path, class: "btn btn-info" %></li>
+    <br>
+  
+    <li><%= link_to "Employees", employees_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Users", users_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Companies", companies_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Reports", reports_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Report Subscribers", report_subscribers_path, class: "btn btn-info" %></li>
+    <br>
+
+    <li><%= link_to "Category Subscribers", category_subscribers_path, class: "btn btn-info" %></li>
+    <br>
+  </ul>
+  <% end %>
+</div>

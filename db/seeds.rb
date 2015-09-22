@@ -8,3 +8,4 @@
 user = User.find_by(name: 'Admin')
 user.admin = true
 user.employee = true
+user.save

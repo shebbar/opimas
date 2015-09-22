@@ -21,7 +21,7 @@
     <h1>List of Associated Employees</h1>
     <% @roleusers = @role.employees %>
     <% @roleusers.each do |roleuser| %>
-      <p><%= roleuser.user.name %></p>
+      <p><%= roleuser.name %></p>
     <% end %>
   </div>
 </div>

@@ -41,6 +41,10 @@ gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem "paperclip", "~> 4.3"
 gem 'jplayer-rails'
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
+gem 'daemons'
+gem 'delayed_job_active_record'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -55,4 +59,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

@@ -9,19 +9,11 @@
 
       <%= f.input :summary %>
 
-      <%= f.input :main_report, as: :file %>
-
-      <%= f.input :charts, as: :file %>
-
-      <%= f.input :vid, as: :file %>
-
-      <%= f.input :press_release, as: :file %>
-
       <%= f.input :publication_date, :as => :date_picker %>
 
-      <%= f.association :employees %>
+      <%= f.association :employees, label: "Author(s)", hint: "Press Ctrl for multiple selections" %>
 
-      <%= f.association :categories %>
+      <%= f.association :categories, hint: "Press Ctrl for multiple selections" %>
 
       <%= f.submit "Save Changes", class: "btn btn-primary" %>
     <% end %>

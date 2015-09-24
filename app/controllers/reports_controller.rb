@@ -26,8 +26,11 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     add_parent_categories (params[:report][:category_ids])
+    handle_attachment_uploads_outside_rails
     @report = Report.create(report_params)
-
+    @report_title = @report.title
+    @pub_date = @report.created_at
+    update_attachments
     respond_to do |format|
       if @report.save
         format.html { redirect_to @report, notice: 'Report was successfully created.' }
@@ -92,5 +95,19 @@ class ReportsController < ApplicationController
           end
         end
         params[:report][:category_ids] = paramarray.uniq
+    end
+
+    def handle_attachment_uploads_outside_rails
+      params[:report][:vid] = nil
+      params[:report][:main_report] = nil
+      params[:report][:charts] = nil
+      params[:report][:press_release] = nil
+    end
+
+    def update_attachments
+      @report.update(vid_file_name: "#{@report_title}_video.mp4", vid_content_type: "video/mp4", vid_file_size: "4000000", vid_updated_at: @pub_date,
+                    press_release_file_name: "#{@report_title}_pr.pdf", press_release_content_type: "application/pdf", press_release_file_size: "100000", press_release_updated_at: @pub_date,
+                    main_report_file_name: "#{@report_title}_main.pdf", main_report_content_type: "application/pdf", main_report_file_size: "250000", main_report_updated_at: @pub_date,
+                    charts_file_name: "#{@report_title}_data.xlsx", charts_content_type: "application/vnd.ms-excel", charts_file_size: "100000", charts_updated_at: @pub_date)
     end
 end

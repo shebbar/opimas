@@ -78,29 +78,29 @@ class ReportsController < ApplicationController
       params.require(:report).permit(:title, :summary, :publication_date, :press_release, :main_report, :charts, :vid, employee_ids: [], category_ids: [])
     end
 
-    def add_parent_categories (catarrays)
-      paramarray = catarrays
-        catarrays.each do |catarr|
-          if Category.exists?(catarr)
-            @count = 1
-            catObj = Category.find(catarr)
-            unless catObj.parent_id.nil?
-              parentcatObj = Category.find(catObj.parent_id)
-              paramarray <<  parentcatObj.id
-              unless parentcatObj.parent_id.nil?
-                mastercatObj = Category.find(parentcatObj.parent_id)
-                paramarray <<  mastercatObj.id
-              end
-            end
-          end
+    def add_parent_categories(catarrays)
+      @paramarray = catarrays
+      unless catarrays.all? &:blank?
+        catarrays.length.times do |i|
+          check_category_parent(catarrays[i])
         end
-        params[:report][:category_ids] = paramarray.uniq
+      end
+      params[:report][:category_ids] = @paramarray.uniq
+    end
+
+    def check_category_parent(catid)
+      unless catid.blank?
+        @paramarray << catid
+        @catObj = Category.find(catid)
+        check_category_parent(@catObj.parent_id) unless @catObj.parent_id.nil?
+      end
     end
 
     def handle_attachment_uploads_outside_rails
       params[:report][:vid] = nil
       params[:report][:main_report] = nil
       params[:report][:charts] = nil
+
       params[:report][:press_release] = nil
     end
 

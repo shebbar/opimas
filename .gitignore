@@ -16,3 +16,8 @@
 /shared/sockets/*
 /public/assets/*
 /public/system/*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -86,6 +86,5 @@ production:
   database: opimas_production
   username: opimas
   password: <%= ENV['OPIMAS_DATABASE_PASSWORD'] %>
-  password: <%= ENV['OPIMAS_DATABASE_PASSWORD'] %>
   host: <%= ENV['OPIMAS_DATABASE_HOST'] %>
   port: 5432 

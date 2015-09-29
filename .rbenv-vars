@@ -4,3 +4,4 @@ S3_BUCKET=opimas
 AWS_BUCKET=opimas
 AWS_ACCESS_KEY_ID=AKIAI6CQX223PUF7MV6Q
 AWS_SECRET_ACCESS_KEY=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
+OPIMAS_DATABASE_HOST=opimasproduction.clglhqe8bo2i.us-west-2.rds.amazonaws.com

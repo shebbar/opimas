@@ -16,7 +16,9 @@
 /shared/sockets/*
 /public/assets/*
 /public/system/*
-
+/config/puma.rb
+/.rbenv-vars
+/vars.sh
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

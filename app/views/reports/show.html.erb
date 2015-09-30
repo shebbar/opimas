@@ -18,37 +18,27 @@
     </p>
 
     <p>
-      <strong>Press release:</strong>
-      <%= link_to @report.press_release.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
-        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
-      <% end %>
+      <strong>Press release</strong>
       <br>
-<iframe src=<%=@report.press_release.url%> width="500" height="375" type='application/pdf'> </iframe>
+      <iframe src=<%=@report.press_release.url%> width="500" height="375" type='application/pdf'> </iframe>
     </p>
 
     <p>
-      <strong>Main report:</strong>
-      <%= link_to @report.main_report.url(:original), class: "btn btn-primary" do %>
-        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
-      <% end %>
-<br>
-<iframe src=<%=@report.press_release.url%> width="500" height="375" type='application/pdf'> </iframe>
+      <strong>Main report</strong>
+      <br>
+      <iframe src=<%=@report.main_report.url%> width="500" height="375" type='application/pdf'> </iframe>
     </p>
 
     <p>
-      <strong>Charts:</strong>
-      <%= link_to @report.charts.url(:original), :target => '_blank', class: "btn btn-primary" do %>
-        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
-      <% end %>
+      <strong>Charts</strong>
+      <br>
+      <iframe src=<%=@report.charts.url%> width="500" height="375" type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'> </iframe>
     </p>
 
     <p>
       <strong>Vid:</strong>
-      <%= link_to @report.vid.url(:original), :target => '_blank', class: "btn btn-primary" do %>
-        <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
-      <% end %>
-<br>
-<iframe src=<%=@report.vid.url%> width="500" height="375" type='video/mp4'> </iframe>
+      <br>
+      <iframe src=<%=@report.vid.url%> width="500" height="375" type='video/mp4'> </iframe>
     </p>
 
   </div>

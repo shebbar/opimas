@@ -26,11 +26,7 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     add_parent_categories (params[:report][:category_ids])
-    handle_attachment_uploads_outside_rails
     @report = Report.create(report_params)
-    @report_title = @report.title
-    @pub_date = @report.created_at
-    update_attachments
     respond_to do |format|
       if @report.save
         format.html { redirect_to @report, notice: 'Report was successfully created.' }

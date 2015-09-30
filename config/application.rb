@@ -1,8 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'aws-sdk-v1'
-require 'aws-sdk'
+#require 'aws-sdk-v1'
+#require 'aws-sdk'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

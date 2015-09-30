@@ -19,30 +19,36 @@
 
     <p>
       <strong>Press release:</strong>
-      <%= link_to Report.last.press_release.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+      <%= link_to @report.press_release.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
         <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
       <% end %>
+      <br>
+<iframe src=<%=@report.press_release.url%> width="500" height="375" type='application/pdf'> </iframe>
     </p>
 
     <p>
       <strong>Main report:</strong>
-      <%= link_to Report.last.main_report.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+      <%= link_to @report.main_report.url(:original), class: "btn btn-primary" do %>
         <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
       <% end %>
+<br>
+<iframe src=<%=@report.press_release.url%> width="500" height="375" type='application/pdf'> </iframe>
     </p>
 
     <p>
       <strong>Charts:</strong>
-      <%= link_to Report.last.charts.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+      <%= link_to @report.charts.url(:original), :target => '_blank', class: "btn btn-primary" do %>
         <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
       <% end %>
     </p>
 
     <p>
       <strong>Vid:</strong>
-      <%= link_to Report.last.vid.url(:original, false), :target => '_blank', class: "btn btn-primary" do %>
+      <%= link_to @report.vid.url(:original), :target => '_blank', class: "btn btn-primary" do %>
         <span class="glyphicon glyphicon-save" title="Click to open in a new browser, Right-click to save"></span>
       <% end %>
+<br>
+<iframe src=<%=@report.vid.url%> width="500" height="375" type='video/mp4'> </iframe>
     </p>
 
   </div>

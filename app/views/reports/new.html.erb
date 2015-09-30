@@ -11,6 +11,14 @@
 
       <%= f.input :publication_date, :as => :date_picker %>
 
+      <%= f.input :main_report, as: :file %>
+
+      <%= f.input :press_release, as: :file %>
+
+      <%= f.input :charts, as: :file %>
+
+      <%= f.input :vid, as: :file %>
+
       <%= f.association :employees, label: "Author(s)", hint: "Press Ctrl for multiple selections" %>
 
       <%= f.association :categories, hint: "Press Ctrl for multiple selections" %>

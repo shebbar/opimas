@@ -18,4 +18,7 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 //= require 'jquery.jplayer'
+//= require viewportchecker
+//= require jquery_002
+//= require analytics
 //= require_tree .

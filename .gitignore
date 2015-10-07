@@ -20,6 +20,7 @@
 /config/puma.rb
 /.rbenv-vars
 /vars.sh
+/redis-2.8.18/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

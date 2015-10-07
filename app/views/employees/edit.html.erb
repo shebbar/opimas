@@ -1,5 +1,7 @@
 <% provide(:title, 'Edit Employee') %>
-<h1>Edit Employee</h1>
+<div class="page_title">
+  <h1>Edit Employee</h1>
+</div>
 <% @managers = Employee.includes(:subordinates) %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
